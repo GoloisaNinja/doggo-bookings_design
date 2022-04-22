@@ -1,0 +1,17 @@
+{
+	"name": "go-bookings-design",
+	"version": "1.0.0",
+	"description": "design portion of gobookings project",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "live-server static/public",
+		"compile:sass": "sass static/stylesheets:static/public/css -w"
+	},
+	"author": "jon collins",
+	"license": "ISC",
+	"dependencies": {
+		"live-server": "^1.2.1",
+		"sass": "^1.50.1"
+	}
+}

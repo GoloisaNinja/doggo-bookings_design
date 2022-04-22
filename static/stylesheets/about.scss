@@ -1,0 +1,15 @@
+@import './utils';
+
+* {
+	@include reset;
+}
+
+.navbar {
+	@include navbar;
+}
+.footer {
+	@include footer;
+}
+.container {
+	@include container;
+}

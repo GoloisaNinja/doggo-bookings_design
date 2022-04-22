@@ -1,0 +1,131 @@
+@import './utils';
+@import './colors';
+
+* {
+	@include reset;
+}
+
+.navbar {
+	@include navbar;
+}
+.footer {
+	@include footer;
+}
+.container {
+	@include container;
+}
+
+.image-carousel {
+	.img-container {
+		position: relative;
+		.overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background-color: black;
+			opacity: 0.3;
+			z-index: 1;
+		}
+		> div:nth-child(2) {
+			top: 50%;
+			left: 25%;
+			transform: translate(-25%, -50%);
+			position: absolute;
+			font-family: 'Lora', serif;
+			color: #eee;
+			z-index: 2;
+			> h1 {
+				font-size: 40px;
+				text-shadow: 2px 2px 0.5px #303030;
+				margin-bottom: 25px;
+				@media (min-width: 600px) {
+					font-size: 60px;
+				}
+				@media (min-width: 1000px) {
+					font-size: 85px;
+				}
+			}
+			> p {
+				text-shadow: 2px 2px 0.5px #303030;
+				@media (min-width: 600px) {
+					font-size: 24px;
+				}
+				@media (min-width: 1000px) {
+					font-size: 30px;
+				}
+			}
+		}
+		> img {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+.offerings {
+	> h1 {
+		font-family: 'Lora', serif;
+		font-size: 35px;
+		font-weight: bold;
+		margin-top: 50px;
+		padding-left: 25px;
+		color: #404040;
+	}
+	.feature-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 25px;
+		margin-top: 50px;
+		padding: 0px 25px;
+		@media (min-width: 600px) {
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (min-width: 1000px) {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+
+	.feature-card {
+		display: flex;
+		flex-direction: column;
+		background-color: darken($main-green-color, 10%);
+		padding: 25px;
+		font-family: 'Lora', serif;
+		font-weight: 700;
+		box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+			rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+			rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+		border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
+		> h2 {
+			color: #fff;
+			margin-bottom: 15px;
+		}
+		> p {
+			color: #eee;
+			font-family: 'Rubik', sans-serif;
+			font-size: 14px;
+			font-weight: 600;
+			flex: 1;
+		}
+		> button {
+			margin-top: 20px;
+			background: none;
+			border: none;
+			font-family: 'Rubik', sans-serif;
+			background-color: black;
+			color: #fff;
+			padding: 10px;
+			border: 1px solid black;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: all 0.4s ease-in-out;
+			&:hover {
+				color: black;
+				background-color: #fff;
+				border: 1px solid #fff;
+			}
+		}
+	}
+}
