@@ -128,6 +128,7 @@
 
 .image-carousel .img-container {
   position: relative;
+  background-color: black;
 }
 .image-carousel .img-container .overlay {
   position: absolute;
@@ -147,10 +148,11 @@
   font-family: "Lora", serif;
   color: #eee;
   z-index: 2;
+  background: rgba(60, 165, 181, 0.7);
+  padding: 25px;
 }
 .image-carousel .img-container > div:nth-child(2) > h1 {
   font-size: 40px;
-  text-shadow: 2px 2px 0.5px #303030;
   margin-bottom: 25px;
 }
 @media (min-width: 600px) {
@@ -162,9 +164,6 @@
   .image-carousel .img-container > div:nth-child(2) > h1 {
     font-size: 85px;
   }
-}
-.image-carousel .img-container > div:nth-child(2) > p {
-  text-shadow: 2px 2px 0.5px #303030;
 }
 @media (min-width: 600px) {
   .image-carousel .img-container > div:nth-child(2) > p {
@@ -179,15 +178,36 @@
 .image-carousel .img-container > img {
   display: block;
   width: 100%;
+  min-height: 100vh;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  opacity: 1;
 }
 
-.offerings > h1 {
+.intro {
+  padding: 0px 25px;
+}
+.intro > h2 {
+  font-family: "Lora", serif;
+  font-size: 35px;
+  font-weight: bold;
+  margin: 50px 0px;
+  color: #3c3c3c;
+}
+.intro > p {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #696969;
+}
+
+.offerings > h2 {
   font-family: "Lora", serif;
   font-size: 35px;
   font-weight: bold;
   margin-top: 50px;
   padding-left: 25px;
-  color: #404040;
+  color: #3c3c3c;
 }
 .offerings .feature-grid {
   display: grid;
@@ -217,7 +237,7 @@
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
-.offerings .feature-card > h2 {
+.offerings .feature-card > h3 {
   color: #fff;
   margin-bottom: 15px;
 }
@@ -233,18 +253,62 @@
   background: none;
   border: none;
   font-family: "Rubik", sans-serif;
-  background-color: black;
+  background-color: #5e514f;
   color: #fff;
   padding: 10px;
-  border: 1px solid black;
-  border-radius: 5px;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
 }
 .offerings .feature-card > button:hover {
-  color: black;
-  background-color: #fff;
-  border: 1px solid #fff;
+  background-color: #bbc0c0;
+  color: #392f30;
+}
+
+.img-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 2;
+}
+.img-controls .rect {
+  cursor: pointer;
+  display: inline-block;
+  width: 35px;
+  height: 10px;
+  background-color: #eee;
+  opacity: 0.5;
+  transition: all 0.4s ease-in-out;
+}
+.img-controls .rect.enable {
+  opacity: 1;
+}
+.img-controls .rect:hover {
+  opacity: 1;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.2s;
+  animation-name: fade;
+  animation-duration: 1.2s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 2;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 2;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

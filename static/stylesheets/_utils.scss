@@ -88,6 +88,21 @@
 		}
 	}
 }
+@mixin basic-button-style {
+	background: none;
+	border: none;
+	padding: 8px 10px;
+	margin-top: 15px;
+	background-color: black;
+	font-family: 'Rubik', sans-serif;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+	transition: all 0.4s ease-in-out;
+	&:hover {
+		background-color: lighten(black, 25%);
+	}
+}
 @mixin footer {
 	display: grid;
 	grid-template-areas: 'site tech';
